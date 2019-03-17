@@ -1,0 +1,12 @@
+.web-projects{
+  &__projects-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(0px, auto);
+    column-gap: 20px;
+    row-gap: 10px;
+    @media(max-width: 1024px){
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

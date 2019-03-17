@@ -1,0 +1,41 @@
+<div class="image-card">
+    <div class="image-card__photo-info-author">
+      <div class="image-card__photo-info-author-photo"><img src={{user.profile_image.large}} alt=""></div>
+      <a
+              target="_blank"
+              href={{user.links.html}}
+              class="image-card__photo-info-author-name"
+      >
+        {{user.username}}
+      </a>
+    </div>
+  <div class="image-card__image"
+       [ngStyle]="{background: 'url(' + image +') no-repeat center', backgroundSize: 'cover'}"
+  ></div>
+  <div class="image-card__photo-info">
+    <div *ngIf="user.bio" class="image-card__photo-info-bio">{{user.bio}}</div>
+
+    <div class="image-card__photo-info-total">
+      <div>Total photos: {{user.total_photos}}</div>
+      <div>Total likes: {{user.total_likes}}</div>
+    </div>
+    <div class="image-card__photo-info-social">
+
+        <a *ngIf="user.instagram_username"
+           target="_blank"
+           href="{{instagramLink}}"
+        >
+          <button mat-stroked-button>Instagram</button>
+        </a>
+
+
+        <a *ngIf="user.twitter_username"
+           target="_blank"
+           href="{{twitterLink}}"
+        >
+          <button mat-stroked-button>Twitter</button>
+        </a>
+
+    </div>
+  </div>
+</div>

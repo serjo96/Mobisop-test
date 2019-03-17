@@ -1,0 +1,15 @@
+<div class="web-projects">
+    <h1 class="page-title">Web projects</h1>
+    <div
+            infiniteScroll
+            [infiniteScrollDistance]="2"
+            [infiniteScrollUpDistance]="1"
+            (scrolled)="onScroll()"
+            class="web-projects__projects-list">
+            <app-image-card
+                    *ngFor="let image of images"
+                    image={{image.urls.small}}
+                    [user]="image.user"
+            ></app-image-card>
+    </div>
+</div>
